@@ -32,7 +32,7 @@
       font-size: 14px;
     }
     input::placeholder, textarea::placeholder {
-      font-size: 12px;
+      font-size: 10px;
       color: #0f0;
       opacity: 0.5;
     }
@@ -66,19 +66,21 @@
     const timeInput = document.getElementById('time');
 
     dateInput.addEventListener('input', () => {
-      if (dateInput.value.length === 5) {
+      const raw = dateInput.value.replace(/[^\d]/g, '');
+      if (raw.length === 4) {
         timeInput.focus();
       }
     });
 
     document.getElementById('eventForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+      const dateVal = dateInput.value.padEnd(5, '0'); // на случай неполной даты
       const response = await fetch("https://tgwebapp-backend.onrender.com/create-event", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           title: document.getElementById("title").value,
-          datetime: `2025-04-${dateInput.value.slice(0, 2)}T${timeInput.value}`,
+          datetime: `2025-04-${dateVal.slice(0, 2)}T${timeInput.value}`,
           location: "",
           description: "",
           email: ""
