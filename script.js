@@ -13,6 +13,7 @@ function submitEvent() {
   const location = document.getElementById("location").value;
   const note = document.getElementById("note").value;
   const email = document.getElementById("email").value;
+  const BACKEND_URL = "https://tgwebappcalendar-backend.onrender.com";
 
   if (!datetimeInput || !title) {
     alert("Пожалуйста, заполните хотя бы название и дату");
