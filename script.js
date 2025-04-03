@@ -1,6 +1,6 @@
 document.getElementById('date').addEventListener('input', function () {
   const val = this.value.replace(/[^\d]/g, '');
-  if (val.length >= 4) {
+  if (val.length === 4) {
     document.getElementById('time').focus();
   }
 });
