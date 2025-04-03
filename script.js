@@ -8,7 +8,7 @@ document.getElementById('date').addEventListener('input', function () {
 document.getElementById('event-form').addEventListener('submit', async function (e) {
   e.preventDefault();
 
-  const response = await fetch('https://tgwebapp-backend.onrender.com/create-event', {
+  const response = await fetch('https://tgwebappcalendar-backend.onrender.com/create-event', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
