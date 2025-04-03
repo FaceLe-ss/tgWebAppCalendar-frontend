@@ -1,6 +1,6 @@
-To launch frontend for calendar bot:
+**To launch frontend for calendar bot:**
 
-Open https://dashboard.render.com/
-Open Web Service https://tgwebappcalendar-frontend.onrender.com
-Click Manual Deploy
-Click Deploy latest commit
+1. Open https://dashboard.render.com/
+2. Open Web Service https://tgwebappcalendar-frontend.onrender.com
+3. Click Manual Deploy
+4. Click Deploy latest commit
