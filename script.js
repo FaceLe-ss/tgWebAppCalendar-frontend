@@ -29,7 +29,7 @@ function submitEvent() {
 
   document.getElementById("result").innerText = "⏳ Отправка...";
 
-  fetch("https://tgwebapp-backend.onrender.com/create-event", {
+  fetch("https://tgwebappcalendar-backend-prod.onrender.com/create-event", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(data)
