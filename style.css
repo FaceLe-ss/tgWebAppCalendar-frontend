@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'ClassicComic';
+  src: url('ClassicComic.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'ClassicComic', monospace;
+  background: black url('matrix_final_static.png') center center no-repeat;
+  background-size: cover;
+  color: #00ff00;
+  overflow-x: hidden;
+}
+
+.matrix-loader {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00ff00;
+  background-color: transparent;
+  text-align: center;
+  padding: 30px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+.background {
+  background: url('matrix_final_effect.gif') center center no-repeat;
+  background-size: cover;
+  opacity: 0.25;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px dashed #00ff00;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+input, textarea, button {
+  width: 100%;
+  background: black;
+  color: #00ff00;
+  border: 2px dashed #00ff00;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'ClassicComic', monospace;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #00ff00;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #00ff00;
+  opacity: 0.6;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 18px;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.dropdown-toggle {
+  background-color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: none;
+  border: 2px dashed #00ff00;
+  color: #00ff00;
+  margin-top: 20px;
+}
